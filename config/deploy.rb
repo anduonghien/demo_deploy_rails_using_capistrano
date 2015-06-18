@@ -1,10 +1,10 @@
 # config valid only for current version of Capistrano
-lock '3.3.5'
+lock '3.4.0'
 
 set :application, 'demo_deploy_using_capistano'
 set :repo_url, 'git@github.com:dhienan/demo_deploy_rails_using_capistrano.git'
 set :deploy_user, 'vagrant'
-
+set :branch, fetch(:branch, "master")
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 

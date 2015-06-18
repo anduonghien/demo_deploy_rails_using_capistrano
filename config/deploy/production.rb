@@ -32,7 +32,7 @@ set :bundle_flags, "--no-deployment"
 # }
  set :ssh_options, {
    keys: %w(/home/an/.ssh/id_rsa),
-   forward_ agent: false,
+   forward_agent: false
    # auth_methods: %w(password)
  }
 
