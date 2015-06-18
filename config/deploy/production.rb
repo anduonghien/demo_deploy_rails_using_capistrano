@@ -26,9 +26,14 @@ set :rails_env, 'production'
 set :bundle_flags, "--no-deployment"
 
 
-set :ssh_options, {
-  keys: %w(/Users/thien.ho/.ssh/edutower.pem),
-  forward_agent: true,
-}
+# set :ssh_options, {
+#   keys: %w(/Users/thien.ho/.ssh/edutower.pem),
+#   forward_agent: true,
+# }
+ set :ssh_options, {
+   keys: %w(/home/an/.ssh/id_rsa),
+   forward_ agent: false,
+   # auth_methods: %w(password)
+ }
 
 set :nginx_server_name, 'demo_deploy_cap'
