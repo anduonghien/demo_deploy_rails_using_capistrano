@@ -1,15 +1,15 @@
 # config valid only for current version of Capistrano
 lock '3.3.5'
 
-set :application, 'edutower'
-set :repo_url, 'git@github.com:Sekailab/EDUTOWER.git'
-set :deploy_user, 'ubuntu'
+set :application, 'demo_deploy_using_capistano'
+set :repo_url, 'git@github.com:dhienan/demo_deploy_rails_using_capistrano.git'
+set :deploy_user, 'vagrant'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/ubuntu/EDUTOWER'
+set :deploy_to, '/home/vagrant/demo_deploy_using_capistano'
 
 # Default value for :scm is :git
 # set :scm, :git

@@ -4,8 +4,8 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-user = "ubuntu"
-ip_address = "52.24.161.35"
+user = "vagrant"
+ip_address = "192.168.33.10"
 
 role :app, ["#{user}@#{ip_address}"]
 role :web, ["#{user}@#{ip_address}"]
@@ -31,4 +31,4 @@ set :ssh_options, {
   forward_agent: true,
 }
 
-set :nginx_server_name, 'edutower.com'
+set :nginx_server_name, 'demo_deploy_cap'
