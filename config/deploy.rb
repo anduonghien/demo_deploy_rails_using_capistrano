@@ -6,7 +6,7 @@ set :repo_url, 'git@github.com:dhienan/demo_deploy_rails_using_capistrano.git'
 set :deploy_user, 'vagrant'
 # set :branch, fetch(:branch, "master")
 # Default branch is :master
-ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/vagrant/demo_deploy_using_capistano'
@@ -35,7 +35,7 @@ set :deploy_to, '/home/vagrant/demo_deploy_using_capistano'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :branch, "deploy"
+set :branch, "master"
 namespace :deploy do
   desc 'Invoke a rake command'
   task :invoke, [:command] => 'deploy:set_rails_env' do |task, args|
