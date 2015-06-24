@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: demo_deploy_capistrano_production
-  username: demo_deploy_capistrano
+  username: <%= ENV['DEMO_DEPLOY_CAPISTRANO_DATABASE_USERNAME'] %>
   password: <%= ENV['DEMO_DEPLOY_CAPISTRANO_DATABASE_PASSWORD'] %>
